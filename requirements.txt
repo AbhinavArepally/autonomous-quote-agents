@@ -1,0 +1,18 @@
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+streamlit>=1.30
+plotly>=5.18
+joblib>=1.3
+
+# LangGraph is used automatically if installed (pipeline_graph.py falls
+# back to a minimal built-in sequential graph otherwise - see comments
+# there for exactly where the swap happens)
+langgraph>=0.1
+
+# Optional - only needed if you wire up real LLM calls for Agent 3/4
+# reasoning via train_and_save.py / agents/agent3_premium_advisor.py's
+# call_llm_reasoning(). Not required to run the pipeline as shipped;
+# explainability currently uses chain-of-thought text traces (an
+# explicitly acceptable alternative to SHAP per the brief), not SHAP.
+anthropic>=0.25
