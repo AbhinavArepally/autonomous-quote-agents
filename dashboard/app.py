@@ -450,13 +450,7 @@ elif page == "✍️ Predict New Quote":
                 miles_range = st.selectbox("Annual mileage range", [
                     "<= 7.5 K", "> 7.5 K & <= 15 K", "> 15 K & <= 25 K", "> 25 K & <= 35 K",
                     "> 35 K & <= 45 K", "> 45 K & <= 55 K", "> 55 K"])
-                quoted_premium = st.slider(
-                    "Quoted Premium (₹)",
-                    10000.0,   # Minimum
-                    50000.0,   # Maximum
-                    18000.0,   # Default
-                    step=500.0
-                )
+                quoted_premium = st.slider("Quoted premium ($)", 600.0, 950.0, 745.0, step=1.0)
                 agent_type = st.selectbox("Agent type", ["EA", "IA"])
                 region = st.selectbox("Region", ["A", "B", "C", "D", "E", "F", "G", "H"])
 
