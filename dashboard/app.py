@@ -441,10 +441,12 @@ elif page == "✍️ Predict New Quote":
                             unsafe_allow_html=True)
                 sal_range = st.selectbox("Salary range", [
                     "<= $ 25 K", "> $ 25 K <= $ 40 K", "> $ 40 K <= $ 60 K",
-                    "> $ 60 K <= $ 90 K", "> $ 90 K "], format_func=lambda x: x.replace("$", "₹"))
+                    "> $ 60 K <= $ 90 K", "> $ 90 K "],
+                    format_func=lambda x: x.replace("$", "₹").replace("K", "L"))
                 vehcost_range = st.selectbox("Vehicle cost range", [
                     "<= $ 10 K", "> $ 10 K <= $ 20 K", "> $ 20 K <= $ 30 K",
-                    "> $ 30 K <= $ 40 K", "> $ 40 K "], format_func=lambda x: x.replace("$", "₹"))
+                    "> $ 30 K <= $ 40 K", "> $ 40 K "],
+                    format_func=lambda x: x.replace("$", "₹").replace("K", "L"))
                 miles_range = st.selectbox("Annual mileage range", [
                     "<= 7.5 K", "> 7.5 K & <= 15 K", "> 15 K & <= 25 K", "> 25 K & <= 35 K",
                     "> 35 K & <= 45 K", "> 45 K & <= 55 K", "> 55 K"])
